@@ -40,6 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# AI assistant context files (local only)
+# archivos locales
 AGENTS.md
 CLAUDE.md

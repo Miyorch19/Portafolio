@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jorge Dev — Portafolio
 
-## Getting Started
+Portafolio personal de desarrollo web. Diseño minimalista y elegante, enfocado en mostrar proyectos, servicios y precios de forma clara y profesional.
 
-First, run the development server:
+## Stack tecnológico
+
+- **Framework:** Next.js 16 (App Router)
+- **Lenguaje:** TypeScript
+- **Estilos:** Tailwind CSS v4
+- **Fuente:** Montserrat (Google Fonts)
+- **Package manager:** pnpm
+
+## Características
+
+- Diseño minimalista inspirado en Linear.app
+- Modo claro / oscuro con persistencia en `localStorage`
+- Hero con degradado radial sutil
+- Sección de proyectos seleccionados con animación en hover
+- Grid de servicios limpio sin elementos decorativos
+- Tarjetas de precios con mucho espacio en blanco
+- Footer con llamada a la acción
+- Animaciones suaves de entrada (`fade-up`)
+- Totalmente responsivo
+
+## Instalación y desarrollo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Instalar dependencias
+pnpm install
+
+# Iniciar servidor de desarrollo
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estructura del proyecto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+portfolio/
+├── app/
+│   ├── globals.css       # Estilos globales y animaciones
+│   ├── layout.tsx        # Layout raíz con fuente y ThemeProvider
+│   └── page.tsx          # Página principal
+├── components/
+│   ├── ThemeProvider.tsx # Contexto para modo claro/oscuro
+│   ├── Navbar.tsx        # Navbar tipo píldora flotante
+│   ├── HeroSection.tsx   # Hero con degradado y tipografía masiva
+│   ├── ProjectsSection.tsx
+│   ├── ServicesSection.tsx
+│   ├── PricingSection.tsx
+│   └── Footer.tsx
+└── public/
+```
 
-## Learn More
+## Despliegue
 
-To learn more about Next.js, take a look at the following resources:
+La forma más sencilla de desplegar este proyecto es usando [Vercel](https://vercel.com). Solo conecta tu repositorio y Vercel detectará automáticamente que es un proyecto de Next.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contacto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Jorge Dev** — [hola@jorgedev.mx](mailto:hola@jorgedev.mx)

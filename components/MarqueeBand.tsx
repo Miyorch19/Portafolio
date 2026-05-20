@@ -6,7 +6,6 @@ const MARQUEE_TEXT =
   "DESARROLLO WEB ✦ NEXT.JS ✦ DISEÑO ✦ REACT ✦ TYPESCRIPT ✦ MÉXICO ✦ ";
 
 export default function MarqueeBand({ variant = "light" }: MarqueeBandProps) {
-  // Repeat enough to guarantee seamless loop (50% = one copy)
   const repeated = MARQUEE_TEXT.repeat(10);
 
   return (

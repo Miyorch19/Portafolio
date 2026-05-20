@@ -11,7 +11,6 @@ export default function Navbar() {
       aria-label="Navegación principal"
     >
       <div className="flex items-center gap-1.5 bg-[#111111] dark:bg-white text-white dark:text-[#0A0A0A] rounded-full px-2 py-2 text-[14px] font-medium shadow-sm">
-        {/* Theme toggle */}
         <button
           onClick={toggle}
           aria-label={theme === "light" ? "Activar modo oscuro" : "Activar modo claro"}
@@ -20,12 +19,10 @@ export default function Navbar() {
           {theme === "light" ? "○" : "●"}
         </button>
 
-        {/* Divider */}
         <span className="text-white/20 dark:text-black/20 select-none px-1">
           |
         </span>
 
-        {/* Links */}
         <a href="#hero" className="px-4 py-2 rounded-full hover:bg-white/10 dark:hover:bg-black/10 transition-colors">
           Hola!
         </a>

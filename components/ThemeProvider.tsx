@@ -12,11 +12,9 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // Default to light to ensure server render matches initial client render
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    // Solo ejecutado en el cliente
     const saved = localStorage.getItem("theme") as Theme | null;
     const sysDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     
@@ -38,7 +36,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
-  // Siempre debemos retornar el Provider para que los hooks useContext no fallen.
   return (
     <ThemeContext.Provider value={{ theme, toggle }}>
       {children}
