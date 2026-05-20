@@ -7,27 +7,29 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="work" className="py-24 bg-white dark:bg-[#0A0A0A]">
-      <div className="max-w-[900px] mx-auto px-6 md:px-8">
+    <section id="work" className="py-16 sm:py-24 bg-white dark:bg-[#0A0A0A]">
+      <div className="max-w-[900px] mx-auto px-5 sm:px-8">
         <div className="fade-up fade-up-d2">
-          {projects.map((project, i) => (
+          {projects.map((project) => (
             <div
               key={project.num}
-              className="group flex flex-col md:flex-row md:items-baseline gap-4 md:gap-8 py-8 border-b border-[#F0F0F0] dark:border-[#1E1E1E] first:border-t"
+              className="group py-6 sm:py-8 border-b border-[#F0F0F0] dark:border-[#1E1E1E] first:border-t"
             >
-              <span className="text-[13px] text-muted dark:text-[#666] font-medium w-8 shrink-0">
-                {project.num}
-              </span>
-
-              <h3 className="flex-1 text-3xl md:text-5xl font-bold text-ink dark:text-white tracking-tight transition-transform duration-300 group-hover:translate-x-3">
-                {project.name}
-              </h3>
-
-              <div className="flex justify-between md:justify-end gap-12 md:w-48 shrink-0 mt-4 md:mt-0">
-                <span className="text-[15px] text-muted dark:text-[#666] font-medium">
+              {/* Mobile: stacked. Desktop: single row */}
+              <div className="flex items-baseline gap-3 sm:gap-8">
+                <span className="text-[12px] sm:text-[13px] text-muted dark:text-[#666] font-medium w-6 sm:w-8 shrink-0">
+                  {project.num}
+                </span>
+                <h3 className="flex-1 text-2xl sm:text-4xl md:text-5xl font-bold text-ink dark:text-white tracking-tight transition-transform duration-300 group-hover:translate-x-3">
+                  {project.name}
+                </h3>
+              </div>
+              {/* Meta row — always below on mobile, hidden type+year inline on md */}
+              <div className="flex gap-6 mt-2 sm:mt-3 pl-9 sm:pl-14">
+                <span className="text-[13px] sm:text-[15px] text-muted dark:text-[#666] font-medium">
                   {project.type}
                 </span>
-                <span className="text-[15px] text-muted dark:text-[#666] font-medium">
+                <span className="text-[13px] sm:text-[15px] text-muted dark:text-[#666] font-medium">
                   {project.year}
                 </span>
               </div>
