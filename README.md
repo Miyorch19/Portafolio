@@ -56,7 +56,3 @@ portfolio/
 ## Despliegue
 
 La forma más sencilla de desplegar este proyecto es usando [Vercel](https://vercel.com). Solo conecta tu repositorio y Vercel detectará automáticamente que es un proyecto de Next.js.
-
-## Contacto
-
-**Jorge Dev** — [hola@jorgedev.mx](mailto:hola@jorgedev.mx)
